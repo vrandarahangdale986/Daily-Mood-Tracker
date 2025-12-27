@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daily Mood Tracker Web App to track emotions and mental well-being">
+    <title>Daily Mood Tracker</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <!-- App Header -->
+        <header>
+            <h1>🌈 Daily Mood Tracker</h1>
+            <p class="subtitle">Track your emotions, one day at a time</p>
+        </header>
+
+        <!-- Mood Selection Section -->
+        <section aria-labelledby="mood-heading">
+            <h2 id="mood-heading">How are you feeling today?</h2>
+
+            <div class="moods" role="group" aria-label="Mood selection">
+                <button type="button" class="mood" data-mood="😊" aria-label="Happy">😊</button>
+                <button type="button" class="mood" data-mood="😐" aria-label="Neutral">😐</button>
+                <button type="button" class="mood" data-mood="😢" aria-label="Sad">😢</button>
+                <button type="button" class="mood" data-mood="😡" aria-label="Angry">😡</button>
+                <button type="button" class="mood" data-mood="😍" aria-label="Excited">😍</button>
+            </div>
+        </section>
+
+        <!-- Note Section -->
+        <section aria-labelledby="note-heading">
+            <h2 id="note-heading">Add a Note</h2>
+
+            <textarea 
+                id="note" 
+                placeholder="Write something about your day..."
+                aria-label="Daily note">
+            </textarea>
+
+            <button id="saveBtn" type="button">
+                💾 Save Mood
+            </button>
+        </section>
+
+        <!-- Mood History Section -->
+        <section aria-labelledby="history-heading">
+            <h2 id="history-heading">📅 Mood History</h2>
+
+            <ul id="history" aria-live="polite">
+                <!-- Mood entries will appear here -->
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
